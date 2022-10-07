@@ -1,0 +1,62 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}Title of Home {% endblock %}
+
+{% block body %}
+{% load static %}
+<div class="container mt-5">
+    <div class="d-flex flex-wrap">
+        {% for i in products %}
+        <div class="col-md-3 p-2">
+            <div class="card p-3">
+                <img src='/media/{{ i.image }}' alt="">
+                <h4>{{i.product_name}}</h4>
+                <p>{{i.des}} </p>
+                <p>{{i.product_id}} </p>
+                <button type="button" class="btn btn-primary">Add to cart</button>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- <div class="col-md-3 p-2">
+           <div class="card p-3">
+                <img src='{% static "shop/test.png" %}' alt="">
+                <h4>Product Name</h4>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+        </div>
+        <div class="col-md-3 p-2">
+           <div class="card p-3">
+                <img src='{% static "shop/test.png" %}' alt="">
+                <h4>Product Name</h4>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+        </div>
+        <div class="col-md-3 p-2">
+           <div class="card p-3">
+                <img src='{% static "shop/test.png" %}' alt="">
+                <h4>Product Name</h4>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+        </div>
+        <div class="col-md-3 p-2">
+           <div class="card p-3">
+                <img src='{% static "shop/test.png" %}' alt="">
+                <h4>Product Name</h4>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+        </div>
+        <div class="col-md-3 p-2">
+           <div class="card p-3">
+                <img src='{% static "shop/test.png" %}' alt="">
+                <h4>Product Name</h4>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+        </div> -->
+    </div>
+</div>
+{% endblock %}
